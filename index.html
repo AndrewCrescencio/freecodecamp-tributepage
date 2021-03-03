@@ -1,106 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FCC: Personal Portfolio</title>
-    <script src="https://kit.fontawesome.com/881d0e5c76.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
 </head>
-<body>
 
-    <nav class="navbar" id="navbar">
-        <ul class="nav-links">
-            <li><a href="#welcome-section">About</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<body onload="onLoad()">
 
-    <section class="welcome-section" id="welcome-section">
+    <main class="page-container">
 
-        <h1>Oi, I am Andrew</h1>
-        <h2>a web developer</h2>
+        <header>
+            <div class="title">
+                <h2 id="city" class="location-and-date__location">London, UK</h2>
+                <p>Sunday 4th August</p>
+            </div>
+            <div>
+                <form>
+                    <input type="text" id="input">
+                    <button id="btn">Search</button>
+                </form>
+            </div>
+        </header>
 
-    </section>
+        <div class="main-info">
 
-    <section class="projects" id="projects"> 
-
-        <div class="text-container">
-        <h1>These are some of my projects</h1>
-        </div>
-   
-        <div class="container">
-
-            <div class="box project-tile">
-                <a href="">Tribute Page</a>
+            <div class="main-info__temperature">
+                <div class="container">
+                    <img src="#" class="current-temperature__icon" id="icon" alt="" style="width: 100%; height: 100%;">
+                </div>
+                <div class="container">
+                    <h1 id="temp">21</h1>
+                    <h2 id="description">Mostly Sunny</h2>
+                </div>
             </div>
 
-            <div class="box">
-                <a href="">Landing Page</a>
+            <div class="main-info__stats">
+                <div class="container high">
+                    <h3 id="maxtemp_c" class="current-stats__value">23&deg;</h3>
+                    <p class="current-stats__label">High</p>
+                </div>
+
+                <div class="container wind">
+                    <h3 class="current-stats__value">7mph</h3>
+                    <p class="current-stats__label">Wind</p>
+                </div>
+
+                <div class="container  sunrise">
+                    <h3 id="sunrise">00:00</h3>
+                    <p>Sunrise</p>
+                </div>
+
+                <div class="container low">
+                    <h3 id="mintemp_c" class="current-stats__value">14&deg;</h3>
+                    <p class="current-stats__label">Low</p>
+                </div>
+
+
+                <div class="container rain">
+                    <h3 id="rain" class="current-stats__value">0%</h3>
+                    <p class="current-stats__label">Rain</p>
+                </div>
+
+                <div class="container sunset">
+                    <h3 id="sunset">00:00</h3>
+                    <p>Sunset</p>
+                </div>
             </div>
 
-            <div class="box">
-                <a href="">Technical Documentation Page</a>
-            </div>
-
-            <div class="box">
-                <a href=""></a>
-            </div>
-
-            <div class="box">
-                <a href=""></a>
-            </div>
-
-            <div class="box">
-                <a href=""></a>
-            </div>
-
-        </div>
-    
-    </section>
-
-    
-
-    <footer id="contact">
-
-        <div class="text-container" > 
-            <h1>Let's work together...</h1>
-            <h2>How do you take your coffee?</h2>
-        </div>
-
-        <div class="icons-container">
-
-        <span>
-
-            <a href="https://www.freecodecamp.org/fcc5a25b6c7-19fb-4031-842a-863bce12b17e" target="_blank" id="profile-link">
-                <i class="fab fa-free-code-camp">Free Code Camp</i>
-            </a>
-
-        </span>
-
-        <span>
-            <a href="#">
-                <i class="fab fa-github">GitHub</i>
-            </a>
-        </span>
-
-        <span>
-            <a href="#">
-                <i class="fas fa-at">Send amail</i>
-            </a>
-        </span>
-
-        <span>
-            <a href="#">
-                <i class="fas fa-mobile-alt">Call me</i>
-            </a>
-        </span>
-        
         </div>
 
-        
+        <div class="nextdays">
 
-    </footer>
+            <div class="nextdays__item">
+
+                <div class="next-5-days__date">
+                    <h3 id="day1_week">Tue</h3>
+                    <p id="day1_day">30/7</p>
+                </div>
+
+                <div class="next-5-days__icon">
+                    <img src="" id="day1_icon" alt="Sunny">
+                </div>
+
+                <div class="next-5-days__low">
+                    <h3 id="day1_min">10&deg;</h3>
+                    <p>Low</p>
+                </div>
+
+                <div class="next-5-days__high">
+                    <h3 id="day1_max">21&deg;</h3>
+                    <p>High</p>
+                </div>
+
+
+
+                <div class="next-5-days__rain">
+                    <h3 id="day1_rain">0%</h3>
+                    <p>Rain</p>
+                </div>
+
+                <div class="next-5-days__wind">
+                    <h3 id="day1_wind">12mph</h3>
+                    <p>Wind</p>
+                </div>
+
+            </div>
+
+            <div class="nextdays__item">
+
+                <div class="next-5-days__date">
+                    <h3 id="day2_week">Thur</h3>
+                    <p id="day2_day">1/8</p>
+                </div>
+
+                <div class="next-5-days__icon">
+                    <img src="" id="day2_icon" alt="Mostly sunny">
+                </div>
+
+                <div class="next-5-days__low">
+                    <h3 id="day2_min">7&deg;</h3>
+                    <p>Low</p>
+                </div>
+
+                <div class="next-5-days__high">
+                    <h3 id="day2_max">15&deg;</h3>
+                    <p>High</p>
+                </div>
+
+
+
+                <div class="next-5-days__rain">
+                    <h3 id="day2_rain">75%</h3>
+                    <p>Rain</p>
+                </div>
+
+                <div class="next-5-days__wind">
+                    <h3 id="day2_wind">11mph</h3>
+                    <p>Wind</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
 </body>
+
 </html>

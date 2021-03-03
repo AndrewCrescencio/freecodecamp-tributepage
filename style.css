@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-top: 0.5rem;
+}
+
+.title {
+    padding-left: 2rem;
+}
+
+.page-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/*  Header  */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+input {
+    width: 250px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+button {
+    width: 90px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+/*  Main Info   */
+
+.main-info {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.main-info__temperature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-info__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  Next Days Weather  */
+
+.nextdays {
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.nextdays__item {
+    background-color: rgba(0, 0, 0, 0.20);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-radius: 15px;
+}
